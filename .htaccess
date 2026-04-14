@@ -1,0 +1,9 @@
+php_value display_errors On
+php_value mbstring.http_input auto
+php_value date.timezone Asia/Jakarta
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Rewrite all requests to public/index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ public/index.php [QSA,L]
+</IfModule>
